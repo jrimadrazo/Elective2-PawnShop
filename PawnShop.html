@@ -2,6 +2,7 @@
 	<head>
 		<!link rel="stylesheet" type="text/css" href="PawnShop.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script type="text/javascript" src="PawnShop.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style>
@@ -21,18 +22,47 @@
 		</style>
 	</head>
 	<body>
-		<div>
+		<div id="home_page" style="visibility:visible">
 			<div class="text-center">
 				<h1>PAWNSHOP</h1>
 			</div>
 			<div class="list-group" style="font-size:150%;">
-				<a href="#" class="list-group-item">Item ID: First item<span class="badge badge-success">A</span></a>
+				<a href="#" class="list-group-item" id="pawned_item">Item ID: First item<span class="badge badge-success">A</span></a>
 				<a href="#" class="list-group-item">Item ID: Second item<span class="badge badge-success">A</span></a>
 				<a href="#" class="list-group-item">Item ID: Third item<span class="badge badge-error">N</span></a>
 			</div>
 			<div>
-				<button type="button" class="btn btn-primary">Add Item</button>
+				<button type="button" class="btn btn-primary" onclick="open_adding_page()">Add Item</button>
 			<div>
+		</div>
+		<div id="adding_page" style="visibility:hidden">
+			<form>
+				<fieldset>
+					<legend>Item Information:</legend>
+					<label>Name of Item: </label><input type="text" id="item_name"><br>
+					<label>Owner: </label><input type="text" id="owner"><br>
+					<label>Date Pawned: </label><input type="date"><br>
+					<label>Accessory Type: </label><select name="accessory_type">
+						<option value="ring">Ring</option>
+						<option value="necklace">Necklace</option>
+						<option value="pendant">Pendant</option>
+						<option value="bracelet">Bracelet</option>
+						<option value="earrings">Earrings</option>
+						</select>
+						<br>
+					<label>Quality: </label><select name="quality">
+						<option value="eighteenk">18K</option>
+						<option value="twentyonek">21K</option>
+						</select>
+						<br>
+					<label>Value: </label><input type="text"><br>
+					<label>Buying Amount: </label><input type="text"><br>
+					<label>Weight: </label><input type="text"><br>
+				</fieldset>
+				<input type="button" class="btn btn-primary" onclick="open_home_page()" value="Add Item"></input>
+			</form>
+		</div>
+		<div id="item_info" style="display:none">
 		</div>
 	</body>
 </html>
