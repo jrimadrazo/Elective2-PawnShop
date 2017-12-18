@@ -1,0 +1,79 @@
+header {
+    padding-top: 10px; 
+    padding-right: 15px;
+    padding-bottom: 3px;
+    color: white;
+    background-color: navy
+}
+
+header p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 500%;
+}
+
+/*****FOR HOME PAGE*****/
+#home_page{
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-right: 50px;
+	visibility: visible;
+	text-align: center;
+}
+
+/*****FOR ADDING PAGE*****/
+#adding_page{
+	position: absolute;
+	top: 200px;
+	width: 100%;
+	visibility: hidden;
+}
+.adding_form {
+    padding: 30px;
+    background: #f4f7f8;
+    border-radius: 10px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+.adding_form fieldset{
+    border: none;
+}
+
+.adding_form legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.adding_form label {
+    text-align: left;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.adding_form select,
+.adding_form input[type="number"], 
+.adding_form input[type="date"], 
+.adding_form input[type="text"] {
+    width: 100%;
+    text-align: left;
+    background: rgba(255,255,255,.1);
+    background-repeat:no-repeat;
+    background-position: right 10px top 15px;
+    background-size: 16px 16px;
+    padding:8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:16px;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-appearance: none;
+    border:1;
+    outline:0;
+    -webkit-transition:0.3s ease all;
+    -moz-transition:0.3s ease all;
+    -ms-transition:0.3s ease all;
+    -o-transition:0.3s ease all;
+    transition:0.3s ease all;
+    color:#8a97a0;
+}

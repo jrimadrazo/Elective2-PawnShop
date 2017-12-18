@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript" src="index.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<p>Pawnshop</p>
+		</header>
+		<div id="home_page">
+			<div id="itm_lst" class="list-group">
+				<a>
+					<h3>Item Name</h3>
+					<h6>From Owner (Date)</h6>
+					<p>Type</p>
+					<p>Quality</p>
+					<p>Value</p><br>
+					<p>Weight</p>
+					<p>Buying Amount</p>
+					<p>Buying Price</p><br>
+					<h4>Availability</h4>
+				</a>
+			</div>
+			<div>
+				<input type="button" class="btn btn-primary" onclick="open_adding_page()" value="Add Item"></input>
+				<input type="button" class="btn btn-primary" value="Take Item"></input>
+			</div>
+		</div>
+		<div id="adding_page">
+			<div class="adding_form"><form>
+				<fieldset>
+					<legend>Item Information:</legend>
+					
+					<label>Name of Item: </label>
+					<input type="text" id="item_name"><br><br>
+					
+					<label>Owner: </label>
+					<input type="text" id="item_owner"><br><br>
+					
+					<label>Date Pawned: </label>
+					<input type="date" id="item_date"><br><br>
+					
+					<label>Accessory Type: </label>
+					<select id="item_type">
+						<option value="ring">Ring</option>
+						<option value="necklace">Necklace</option>
+						<option value="pendant">Pendant</option>
+						<option value="bracelet">Bracelet</option>
+						<option value="earrings">Earrings</option>
+					</select><br><br>
+						
+					<label>Quality: </label>
+					<input type="number" placeholder="18K to 21K" id="item_quality"><br><br>
+						
+					<label>Value: </label>
+					<input type="text" id="item_value"><br><br>
+					
+					<label>Buying Amount: </label>
+					<input type="text" id="item_amount"><br><br>
+					
+					<label>Weight: </label>
+					<input type="number" placeholder="in grams" id="item_weight"><br><br>
+				</fieldset>
+				<input type="button" class="btn btn-primary" onclick="add_item()" value="Save Item"></input>
+				<input type="button" class="btn btn-primary" onclick="open_home_page()" value="Cancel"></input>
+			</form></div>
+		</div>
+	</body>
+</html>
