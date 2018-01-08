@@ -1,15 +1,18 @@
 var pawn_item_list = [];
+var iavailable = 0;
 
 function open_home_page()
 {
 	document.getElementById("adding_page").style.visibility = "hidden";
 	document.getElementById("home_page").style.visibility = "visible";
+	document.getElementById("add_button").style.visibility = "visible";
 }
 
 function open_adding_page()
 {
 	document.getElementById("home_page").style.visibility = "hidden";
 	document.getElementById("adding_page").style.visibility = "visible";
+	document.getElementById("add_button").style.visibility = "hidden";
 }
 
 function add_item()
@@ -23,25 +26,32 @@ function add_item()
 	var buyamt = document.getElementById("item_amount").value;
 	var weight = document.getElementById("item_weight").value;
 	var buyprice = get_buying_price(weight, quality);
+	iavailable = 1;
 	
 	var parenta = document.createElement("a");
 	
 	var inameh3 = document.createElement("h3");
 	inameh3.innerHTML = iname;
 	var ownerh6 = document.createElement("h6");
-	ownerh6.innerHTML = owner +" ("+idate+")";
+	ownerh6.innerHTML = "From: "+ owner +" ("+idate+")";
 	var itypep = document.createElement("p");
-	itypep.innerHTML = itype;
+	itypep.innerHTML = "Type: "+ itype;
 	var qualityp = document.createElement("p");
-	qualityp.innerHTML = quality;
+	qualityp.innerHTML = "Quality: "+ quality;
 	var ivaluep = document.createElement("p");
-	ivaluep.innerHTML = ivalue;
+	ivaluep.innerHTML = "Value: "+ ivalue;
 	var weightp = document.createElement("p");
-	weightp.innerHTML = weight;
+	weightp.innerHTML = "Weight: "+ weight +"g";
 	var buyamtp = document.createElement("p");
-	buyamtp.innerHTML = buyamt;
+	buyamtp.innerHTML = "Buying Price: P"+ buyamt;
 	var buypricep = document.createElement("p");
-	buypricep.innerHTML = buyprice;
+	buypricep.innerHTML = "Selling Price: P"+ buyprice;
+	var iavailableh4 = document.createElement("h4");
+	if (iavailable = 1){
+		iavailableh4.innerHTML = "AVAILABLE"
+	} else {
+		iavailableh4.innerHTML = "NOT AVAILABLE"
+	}
 	
 	parenta.appendChild(inameh3);
 	parenta.appendChild(ownerh6);
@@ -51,6 +61,7 @@ function add_item()
 	parenta.appendChild(weightp);
 	parenta.appendChild(buyamtp);
 	parenta.appendChild(buypricep);
+	parenta.appendChild(iavailableh4);
 	
 	$("#itm_lst").append(parenta);
 							
@@ -64,6 +75,9 @@ function add_item()
 	
 	document.getElementById("adding_page").style.visibility = "hidden";
 	document.getElementById("home_page").style.visibility = "visible";
+	iavailable = 0;
+	
+	var newitem = 
 }
 
 function get_buying_price(weight, quality)
@@ -71,6 +85,10 @@ function get_buying_price(weight, quality)
 	return weight*quality;
 }
 
+function change_availability()
+{
+	
+}
 /*function get(id)
 {
 	return doc.getElementById(id);

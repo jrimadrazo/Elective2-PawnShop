@@ -12,22 +12,12 @@
 		</header>
 		<div id="home_page">
 			<div id="itm_lst" class="list-group">
-				<a>
-					<h3>Item Name</h3>
-					<h6>From Owner (Date)</h6>
-					<p>Type</p>
-					<p>Quality</p>
-					<p>Value</p><br>
-					<p>Weight</p>
-					<p>Buying Amount</p>
-					<p>Buying Price</p><br>
-					<h4>Availability</h4>
+				<a onclick="change_availability">
 				</a>
 			</div>
-			<div>
-				<input type="button" class="btn btn-primary" onclick="open_adding_page()" value="Add Item"></input>
-				<input type="button" class="btn btn-primary" value="Take Item"></input>
-			</div>
+		</div>
+		<div>
+			<input id="add_button" type="button" class="btn btn-primary" onclick="open_adding_page()" value="Add Item"></input>
 		</div>
 		<div id="adding_page">
 			<div class="adding_form"><form>
@@ -64,8 +54,10 @@
 					<label>Weight: </label>
 					<input type="number" placeholder="in grams" id="item_weight"><br><br>
 				</fieldset>
-				<input type="button" class="btn btn-primary" onclick="add_item()" value="Save Item"></input>
-				<input type="button" class="btn btn-primary" onclick="open_home_page()" value="Cancel"></input>
+				<div id="page_buttons">
+					<input type="button" class="btn btn-primary" onclick="add_item()" value="Save Item"></input>
+					<input type="button" class="btn btn-primary" onclick="open_home_page()" value="Cancel"></input>
+				</div>
 			</form></div>
 		</div>
 	</body>
